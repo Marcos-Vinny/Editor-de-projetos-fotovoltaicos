@@ -1,0 +1,56 @@
+:root {
+  --bp-navy-950: #071527;
+  --bp-navy-900: #0b1e33;
+  --bp-navy-800: #122c48;
+  --bp-navy-700: #1c3a5e;
+  --bp-navy-600: #2b4d75;
+  --bp-line: #2e4a6b;
+  --bp-amber: #f5a623;
+  --bp-amber-dim: #b97b1a;
+  --bp-white: #eef3f8;
+  --bp-gray: #93a7bd;
+  --bp-danger: #e0554a;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bp-navy-950);
+  color: var(--bp-white);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--bp-amber);
+  color: var(--bp-navy-950);
+}
+
+/* subtle blueprint grid texture behind everything */
+.app-shell {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr 240px;
+  background-image:
+    linear-gradient(var(--bp-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bp-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-color: var(--bp-navy-950);
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: var(--bp-navy-600); border-radius: 3px; }
